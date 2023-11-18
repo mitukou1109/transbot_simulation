@@ -9,7 +9,7 @@
     </group>
   </include>
 
-  <param name="robot_description" textfile="$(find transbot_description)/urdf/transbot_astra.urdf" />
+  <param name="robot_description" textfile="$(find transbot_simulation)/urdf/transbot_astra.urdf" />
 
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model"
     args="-urdf -param robot_description -model robot -x 0 -y 0 -z 0"
