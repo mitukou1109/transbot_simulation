@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="world_name" default="" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <group if="$(eval world_name != '')">
+      <arg name="world_name"
+        value="$(eval find('transbot_simulation') + '/world/' + world_name + '.world'" />
+    </group>
+  </include>
+
+  <param name="robot_description" textfile="$(find transbot_description)/urdf/transbot_astra.urdf" />
+
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model"
+    args="-urdf -param robot_description -model robot -x 0 -y 0 -z 0"
+    respawn="false" output="screen" />
+</launch>
