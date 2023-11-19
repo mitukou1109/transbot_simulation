@@ -6,6 +6,7 @@
   <maintainer email="mitukou1109@g.ecc.u-tokyo.ac.jp">Mitsuhiro Sakamoto</maintainer>
   <license>TODO</license>
 
+  <exec_depend>gazebo_plugins</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>transbot_description</exec_depend>
 
